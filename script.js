@@ -55,17 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-    // Function to animate counter
+// counter......................................................................
 function animateCounter(element, target) {
     let count = 0;
     const interval = setInterval(function () {
@@ -77,6 +67,21 @@ function animateCounter(element, target) {
         }
     }, 50); // adjust speed of counting
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    animateCounter(document.getElementById("counter1"), 100); // Success Rate - K
+    animateCounter(document.getElementById("counter2"), 90); // Complete Projects - %
+    animateCounter(document.getElementById("counter3"), 500); // Satisfied Clients
+    animateCounter(document.getElementById("counter4"), 30); // Trade In The World
+});
+// counter-end......................................................................
+
+
+
+
+
+
+
 
 // IntersectionObserver to detect when the counter is in view
 const counters = document.querySelectorAll('.counter');
@@ -139,3 +144,42 @@ function prevTestimonial() {
     currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
     updateTestimonial();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      loop: true,               // Enables infinite looping
+      margin: 10,               // Adds some space between items
+      nav: false,               // Disable navigation arrows if not needed
+      autoplay: true,           // Enables autoplay
+      autoplayTimeout: 2000,    // Autoplay delay in milliseconds (2 seconds)
+      autoplayHoverPause: true, // Pause on hover
+      responsive: {
+        0: {
+          items: 2              // Number of items to show on small screens
+        },
+        600: {
+          items: 3              // Number of items to show on medium screens
+        },
+        1000: {
+          items: 5              // Number of items to show on large screens
+        }
+      }
+    });
+  });
+  
